@@ -14,10 +14,10 @@
             background-color: black;
         }
 
-        .AAAA {
+        .title-section {
             width: 80%;
             margin: 0 auto;
-            background-color: rgb(99, 99, 99);
+            background-color: black;
             padding-top: 50px;
             margin-top: -70px;
             color: aliceblue
@@ -27,20 +27,30 @@
             padding-top: 80px;
         }
 
-        .image-container {
-            position: absolute;
-            top: 0;
-            right: 10%;
-            margin-top: -5%;
+        .active-link {
+            background-color: #666;
+            /* Dark grey background for highlight */
+            color: white;
+            /* White text color */
+            display: table;
+            align-items: center;
+            /* Center content vertically */
+            justify-content: center;
+            /* Center content horizontally */
+            width: 200%;
+            /* Optional, if you want each link to fill the space */
+            height: 118%;
+            /* Stretch to fill the height of the navbar */
         }
+
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img style="height: 40px;" src="#" alt="">
+            <a class="navbar-brand m-auto p-0 border-0" href="#">
+                <img style="height: 50px" src="img/Title.png" alt="">
             </a>
             <!--Navbar-->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -52,11 +62,13 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <!--justify-content-between-->
                 <div class="navbar-nav mb-2 mb-lg-0 justify-content-between w-50">
-                    <div><a class="nav-link active" aria-current="page" href="#first-section">Character</a></div>
-                    <div><a class="nav-link active" href="#second-section">Story</a></div>
-                    <div><a class="nav-link active" href="#third-section">TRPG</a></div>
-                    <div><a class="nav-link active" href="#forth-section">CG</a></div>
-                    <div><a class="nav-link active" href="#fifth-section">Contact</a></div>
+                    <div><a class="nav-link active" aria-current="page" href="#story-section"
+                            style="font-size: 22px;">Story</a></div>
+                    <div><a class="nav-link active" href="#character-section" style="font-size: 22px;">Character</a>
+                    </div>
+                    <div><a class="nav-link active" href="#TRPG-section" style="font-size: 22px;">TRPG</a></div>
+                    <div><a class="nav-link active" href="#CG-section" style="font-size: 22px;">CG</a></div>
+                    <div><a class="nav-link active" href="#contact-section" style="font-size: 22px;">Contact</a></div>
                 </div>
             </div>
             <!--Search-->
@@ -68,17 +80,7 @@
     </nav>
 
     <div class="content-block">
-        <div class="container">
-            <div class="AAAA">
-                <h1>Unity</h1>
-                <p>1231312Some content at the bottom...</p>
-                <p>1231312</p>
-                <p>1231312</p>
-                <p>1231312</p>
-                <p>1231312</p>
-                <p>1231312</p>
-            </div>
-
+            <!--其他頁面位置-->
             <div id="sections"></div>
 
         </div>
@@ -86,19 +88,46 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-    </script>
-    <!-- Include jQuery from a CDN -->
+        </script>
+
+    <!-- 連結其他頁面，請別改動謝謝！Include jQuery from a CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
-        $(document).ready(function(){
-            $("#sections").load("character.html", function() {
-                $("#sections").append($('<div/>').load("story.html"));
-                $("#sections").append($('<div/>').load("trpg.html"));
-                $("#sections").append($('<div/>').load("cg.html"));
-                $("#sections").append($('<div/>').load("contact.html"));
+        $(document).ready(function () {
+            // Load sections dynamically
+            $("#sections").load("title.html", function () {
+                $(this).append($('<div/>').load("story.html"));
+                $(this).append($('<div/>').load("character.html"));
+                $(this).append($('<div/>').load("trpg.html"));
+                $(this).append($('<div/>').load("cg.html"));
+                $(this).append($('<div/>').load("contact.html"));
             });
+
+            // 連結其他頁面完結
+
+            //Function to highlight navigation link based on scroll position
+            function highlightNav() {
+                var scrollPos = $(window).scrollTop() + $(window).height() / 2;
+                $('.nav-link').each(function () {
+                    var currLink = $(this);
+                    var refElement = $(currLink.attr("href"));
+                    if (refElement.length && refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                        $('.navbar-nav .nav-link').removeClass("active-link");
+                        currLink.addClass("active-link");
+                    } else {
+                        currLink.removeClass("active-link");
+                    }
+                });
+            }
+            $(document).on("scroll", highlightNav);
+
+            // Animate the navbar brand image into place
+
         });
+
     </script>
+
 </body>
 
 </html>

@@ -1,24 +1,134 @@
-<div id="second-section" class="AAAA">
-    <h1>Character</h1>
-    <p class="image-container">
-        <img src="img/Character_A.png" alt="">
-    </p>
-    <p>1231312</p>
-    <p>1231312</p>
-    <p>1231312</p>
-    <p>1231312</p>
-    <p>1231312</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
-    <p>我打我打</p>
+<!-- <div id="character-section" class="AAAA">
+    <h1 style="text-align: center;">Character</h1>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Some content...</p>
+<div class="carousel-container">
+    <div id="carouselCharacter" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/character_01.png" class="d-block w-100" alt="Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/character_02.png" class="d-block w-100" alt="Image 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/character_03.png" class="d-block w-100" alt="Image 3">
+            </div>
+            <div class="carousel-item">
+                <img src="img/character_04.png" class="d-block w-100" alt="Image 4">
+            </div>
+            <div class="carousel-item">
+                <img src="img/character_05.png" class="d-block w-100" alt="Image 5">
+            </div>
+            <div class="carousel-item">
+                <img src="img/character_06.png" class="d-block w-100" alt="Image 6">
+            </div>
+            <div class="carousel-item">
+                <img src="img/character_07.png" class="d-block w-100" alt="Image 7">
+            </div>
+        </div> -->
+
+        <!-- Previous button -->
+        <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselCharacter" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button> -->
+
+        <!-- Next button -->
+        <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselCharacter" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div> -->
+
+    <!-- Previous image preview -->
+    <!-- <div class="carousel-preview-prev"></div> -->
+
+    <!-- Next image preview -->
+    <!-- <div class="carousel-preview-next"></div>
 </div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</div>
+<style>
+.carousel-container {
+    position: relative;
+    height: 100vh; /* Adjust height as needed */
+    background: url('img/character_bg_01.png') no-repeat center;
+    background-size: cover;
+    display: flex; /* Align items horizontally */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+#carouselCharacter {
+    width: 70%; /* Adjust width as necessary */
+    height: 100%; /* Maintain full height of the container */
+}
+
+.carousel-preview-prev,
+.carousel-preview-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 15%; /* Adjust based on your preference */
+    background-color: black; /* For visibility */
+}
+
+.carousel-preview-prev {
+    left: 0;
+}
+
+.carousel-preview-next {
+    right: 0;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5; /* Ensures controls are above the images */
+}
+
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.carousel-item').each(function(index) {
+            var $this = $(this);
+            var $prevIndex = (index === 0) ? $('.carousel-item').length - 1 : index - 1;
+            var $nextIndex = (index === $('.carousel-item').length - 1) ? 0 : index + 1;
+            var $prevImg = $('.carousel-item').eq($prevIndex).find('img').clone();
+            var $nextImg = $('.carousel-item').eq($nextIndex).find('img').clone();
+            $this.find('.carousel-preview-prev').html($prevImg);
+            $this.find('.carousel-preview-next').html($nextImg);
+        });
+    });
+
+
+    $('.carousel-item').each(function(){
+  var next = $(this).next();
+  if (! next.length) {
+    next = $(this).siblings(':first');
+  }
+  next.children(':first-child').clone().appendTo($(this));
+}).each(function(){
+  var prev = $(this).prev();
+  if (! prev.length) {
+    prev = $(this).siblings(':last');
+  }
+  prev.children(':nth-last-child(2)').clone().prependTo($(this));
+});
+</script> -->

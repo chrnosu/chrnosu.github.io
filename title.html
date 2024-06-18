@@ -1,0 +1,31 @@
+<div id="title-section" class="AAAA">
+    <div class="container">
+        <div class="title-section">
+            <img id="img-title" src="img/Title.png" alt="" style="width:100%">
+        </div>
+        <p>&nbsp;</p>
+    </div>
+</div>
+
+
+<style>
+            #img-title {
+            transition: transform 1s ease-out;
+            /* Ensure there is a smooth transition */
+            transform: translateY(-120%);
+            /* Start from above the viewport; adjust as needed */
+            display: block;
+            /* Block display to allow for transform */
+        }
+</style>
+
+<script>
+            $(document).ready(function () {
+                setTimeout(() => {
+                const navbarImage = document.querySelector('#img-title');
+                if (navbarImage) {
+                    navbarImage.style.transform = 'translateY(0)'; // Move image to its original position
+                }
+            }, 100); // Slight delay to ensure styles are computed
+            });
+</script>
