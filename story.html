@@ -1,5 +1,7 @@
 <div id="story-section" class="AAAA">
-    <h1 style="text-align: center;">Story</h1>
+    <h2 class="text-center">Story</h2>
+    <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: 20px auto;"></div>
+    <p>&nbsp;</p>
     <p>&nbsp;</p>
     <div id="carouselStory" class="carousel slide">
         <div class="carousel-indicators">
@@ -12,35 +14,37 @@
             <div class="carousel-item active">
                 <img src="img/story_01.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Story</h5>
+                    <p>在未來，人類進行身體改造，成為新人類，壽命延長但多數變成無意識喪屍。新人類壓迫原人類為奴，原人類帶領反抗力量，聯合其他被壓迫的種族，對抗新人類的暴政。</p>
                 </div>
             </div>
             <div class="carousel-item">
                 <img src="img/story_02.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Some representative placeholder content for the second slide.</p>
+                    <h5>About you</h5>
+                    <p>你是這個世界的外來者，在這個故事中，你可以選擇任何一個陣營，做出任何選擇來拯救世界或毀滅世界。</p>
                 </div>
             </div>
+            caption
+            
             <div class="carousel-item">
                 <img src="img/story_03.png" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="caption-part">
-                        <h5>First Part Title</h5>
-                        <p>Some representative placeholder content for the first part.</p>
+                    <div class="caption-part ">
+                        <h5>皇室 / 新人類</h5>
+                        <p>AAAAAAAAAAAAAA</p>
                     </div>
                     <div class="caption-part">
-                        <h5>Second Part Title</h5>
-                        <p>Some representative placeholder content for the second part.</p>
+                        <h5>反抗軍 /人類</h5>
+                        <p>BBBBBBBBBBBBBBB</p>
                     </div>
                     <div class="caption-part">
-                        <h5>Third Part Title</h5>
-                        <p>Some representative placeholder content for the third part.</p>
+                        <h5>其他種族</h5>
+                        <p>CCCCCCCCCCCCCCC</p>
                     </div>
                 </div>
             </div>
-            
+
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselStory" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -51,7 +55,6 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-    \
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -146,43 +149,62 @@
         /* Align the text to the right */
     }
 
-/* Specific styles for the third slide's caption */
-.carousel-item:nth-child(3) .carousel-caption {
-    position: absolute;
-    left: 10%;      /* 10% from the left */
-    right: 10%;     /* 10% from the right */
-    top: 80%;       /* Positioned 80% from the top of the carousel */
-    transform: translateY(-50%); /* Centering vertically */
-    display: flex;  /* Flex container */
-    justify-content: space-around; /* Space around each flex item */
-    align-items: center; /* Aligns items vertically at the center */
-    width: 80%;     /* Adjusted to 80% of the container width */
-    flex-wrap: nowrap; /* Ensures no wrapping occurs */
-}
-
-/* Styles for each part within the third slide's caption */
-.carousel-item:nth-child(3) .carousel-caption .caption-part {
-    flex: 1;  /* Each part takes equal space */
-    display: flex; /* Flex container for vertical stacking of h5 and p */
-    flex-direction: column; /* Directs children to stack vertically */
-    justify-content: center; /* Centers vertically */
-    align-items: center; /* Centers horizontally */
-    text-align: center; /* Text centered */
-    margin: 0 10px; /* Margin between each part */
-    padding: 5px; /* Padding for content */
-    box-sizing: border-box; /* Includes padding and border in width calculation */
-}
-
-/* Optional: Adding responsiveness to handle different screen sizes */
-@media (max-width: 768px) {
+    /* Specific styles for the third slide's caption */
     .carousel-item:nth-child(3) .carousel-caption {
-        flex-direction: column; /* Stacks the caption parts vertically on smaller screens */
-        top: 50%; /* Adjust vertical position */
+        position: absolute;
+        left: 10%;
+        /* 10% from the left */
+        right: 10%;
+        /* 10% from the right */
+        top: 80%;
+        /* Positioned 80% from the top of the carousel */
         transform: translateY(-50%);
+        /* Centering vertically */
+        display: flex;
+        /* Establishes this as a flex container */
+        justify-content: space-around;
+        /* Evenly spaces the children within the container */
+        align-items: center;
+        /* Aligns children vertically in the center */
+        width: 80%;
+        /* Total width after accounting for left and right padding */
+        height: auto;
+        /* Auto height based on content */
+        flex-wrap: nowrap;
+        /* Prevents items from wrapping */
     }
-    .carousel-item:nth-child(3) .carousel-caption .caption-part {
-        margin-bottom: 10px; /* Adds vertical spacing */
-    }
-}
 
+    /* Styles for each part within the third slide's caption */
+    .carousel-item:nth-child(3) .carousel-caption .caption-part {
+        flex-grow: 1;
+        /* Allows each part to grow equally */
+        flex-basis: 0;
+        /* Starts sizing from 0% width, grows as needed */
+        display: flex;
+        /* Also establishes each part as a flex container */
+        flex-direction: column;
+        /* Stacks children (h5 and p) vertically */
+        justify-content: center;
+        /* Centers content vertically within each part */
+        align-items: center;
+        /* Centers content horizontally within each part */
+        text-align: center;
+        /* Centers text within each part */
+        margin: 0 10px;
+        /* Provides a fixed margin for clarity */
+        min-width: 0;
+        /* Ensures flex items respect width constraints */
+        padding: 5px;
+        /* Padding for visual separation */
+        box-sizing: border-box;
+        /* Includes padding in the width calculation */
+    }
+
+    /* Ensures text does not overflow */
+    .carousel-item:nth-child(3) .carousel-caption .caption-part h5,
+    .carousel-item:nth-child(3) .carousel-caption .caption-part p {
+        white-space: normal;
+        /* Allows natural text wrapping */
+        overflow: hidden;
+        text-overflow: ellipsis;}
 </style>
