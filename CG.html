@@ -1,67 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CG Gallery</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .img-thumbnail {
-            cursor: pointer;
-        }
-        .modal-content {
-            background-color: transparent; /* 保持模态框内容背景透明 */
-            border: none; /* 去掉模态框的边框 */
-            box-shadow: none; /* 去掉模态框的阴影 */
-        }
-        .modal-body {
-            text-align: center; /* 图片居中 */
-        }
-        .modal-img {
-            max-width: 100%;
-            max-height: calc(100vh - 200px); /* 设置最大高度，避免图片过大 */
-            width: auto;
-            height: auto;
-            object-fit: contain; /* 图片填充整个容器 */
-        }
-        .modal-caption {
-            margin-top: 15px;
-            font-size: 1.1em;
-            color: #ffffff; /* 设置文字颜色为红色 */
-        }
-    </style>
-</head>
-<body>
 <div id="CG-section" class="AAAA container">
-    <h2 class="text-center">Gallery</h2>
-    <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: 20px auto;"></div>
+    <h2 style="text-align: center; transform: scale(0.5);"><img src="img/Gallery_top.png" alt="">></h2>
+    <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: -30px auto;"></div>
     <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
     <!-- Gallery -->
     <div class="row">
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img src="img/CG_01.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG01" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_01.jpg" data-img-caption="位於地下水道的下級士兵"/>
+            <img src="img/CG_01.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG01"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_01.jpg"
+                data-img-caption="位於地下水道的下級士兵" />
 
-            <img src="img/CG_02.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG02" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_02.jpg" data-img-caption="地下水道"/>
+            <img src="img/CG_02.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG02"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_02.jpg"
+                data-img-caption="地下水道" />
         </div>
 
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img src="img/CG_03.png" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG03" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_03.png" data-img-caption="被污染的皇城"/>
+            <img src="img/CG_03.png" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG03"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_03.png"
+                data-img-caption="被污染的皇城" />
 
-            <img src="img/CG_04.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG04" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_04.jpg" data-img-caption="被擁有意識的肉泥侵蝕寄生的皇城內部"/>
+            <img src="img/CG_04.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG04"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_04.jpg"
+                data-img-caption="被擁有意識的肉泥侵蝕寄生的皇城內部" />
         </div>
 
         <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
-            <img src="img/CG_05.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG05" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_05.jpg" data-img-caption="充滿屍體的護城河"/>
+            <img src="img/CG_05.jpg" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG05"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_05.jpg"
+                data-img-caption="充滿屍體的護城河" />
 
-            <img src="img/CG_06.png" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG06" data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_06.png" data-img-caption="保有舊人類的喜好的新人類"/>
+            <img src="img/CG_06.png" class="w-100 shadow-1-strong rounded mb-4 img-thumbnail" alt="CG06"
+                data-bs-toggle="modal" data-bs-target="#imageModal" data-img-src="img/CG_06.png"
+                data-img-caption="保有舊人類的喜好的新人類" />
         </div>
     </div>
     <!-- Gallery -->
 </div>
 
+<!--排版用-->
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<img style="width: 30%; display: block; margin: auto;" src="img/divider.png" alt="">
+<p>&nbsp;</p>
+<img style="width: 50%; display: block; margin: auto;" src="img/divider.png" alt="">
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
@@ -77,6 +60,43 @@
     </div>
 </div>
 
+<style>
+    .img-thumbnail {
+        cursor: pointer;
+    }
+
+    .modal-content {
+        background-color: transparent;
+        /* 保持模态框内容背景透明 */
+        border: none;
+        /* 去掉模态框的边框 */
+        box-shadow: none;
+        /* 去掉模态框的阴影 */
+    }
+
+    .modal-body {
+        text-align: center;
+        /* 图片居中 */
+    }
+
+    .modal-img {
+        max-width: 100%;
+        max-height: calc(100vh - 200px);
+        /* 设置最大高度，避免图片过大 */
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        /* 图片填充整个容器 */
+    }
+
+    .modal-caption {
+        margin-top: 15px;
+        font-size: 1.1em;
+        color: #ffffff;
+        /* 设置文字颜色为红色 */
+    }
+</style>
+
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
 <script>
@@ -89,5 +109,3 @@
         });
     });
 </script>
-</body>
-</html>

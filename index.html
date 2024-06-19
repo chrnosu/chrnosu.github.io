@@ -5,25 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mortis</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="shortcut icon" href="TemplateData/favicon.ico">
-        <link rel="stylesheet" href="TemplateData/style.css">
-        <link rel="manifest" href="manifest.webmanifest">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <link rel="manifest" href="manifest.webmanifest">
 
     <style>
         body {
             background-color: black;
+            background-image: url("img/Main_BG.png");
+            background-repeat: repeat-y;
+            background-size: 78.5% auto;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         .AAAA {
             width: 80%;
             margin: 0 auto;
-            background-color: black;
             padding-top: 50px;
             margin-top: -70px;
             color: aliceblue;
+        }
+
+        .content-block {
+            padding-top: 80px;
+        }
+
+        .active-link {
+            background-color: black;
+            color: white;
+            display: table;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 118%;
         }
 
         .title-section {
@@ -34,43 +52,13 @@
             margin-top: -70px;
             color: aliceblue
         }
-
-        .content-block {
-            padding-top: 80px;
-        }
-
-        .active-link {
-            background-color: black;
-            /* Dark grey background for highlight */
-            color: white;
-            /* White text color */
-            display: table;
-            align-items: center;
-            /* Center content vertically */
-            justify-content: center;
-            /* Center content horizontally */
-            width: 200%;
-            /* Optional, if you want each link to fill the space */
-            height: 118%;
-            /* Stretch to fill the height of the navbar */
-        }
-
-        .title-section {
-    width: 100%; /* 或根據實際需求調整寬度 */
-    margin: auto; /* 水平居中 */
-    position: relative; /* 如果需要的話，可設置為 relative */
-    background-color: black; /* 背景色 */
-    color: white; /* 文字顏色 */
-    padding: 20px 0; /* 添加一些內距 */
-}
-
-
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
+            <p>&emsp;</p>
             <a class="navbar-brand m-auto p-0 border-0" href="#">
                 <img style="height: 50px" src="img/Title.png" alt="">
             </a>
@@ -84,28 +72,30 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <!--justify-content-between-->
                 <div class="navbar-nav mb-2 mb-lg-0 justify-content-between w-50">
-                    <div><a class="nav-link active" aria-current="page" href="#story-section"
-                            style="font-size: 22px;">Story</a></div>
-                    <div><a class="nav-link active" href="#character-section" style="font-size: 22px;">Character</a>
+                    <div><a class="nav-link active" aria-current="page" href="#story-section"><img
+                                src="img/Nav_Story.png" alt=""></a></div>
+                    <div><a class="nav-link active" href="#character-section"><img src="img/Nav_character.png"
+                                alt=""></a></div>
+                    <div><a class="nav-link active" href="#TRPG-section"><img src="img/Nav_trpg.png" alt=""></a></div>
+                    <div><a class="nav-link active" href="#CG-section"><img src="img/Nav_gallery.png" alt=""></a></div>
+                    <div><a class="nav-link active" href="#contact-section"><img src="img/Nav_contact.png" alt=""></a>
                     </div>
-                    <div><a class="nav-link active" href="#TRPG-section" style="font-size: 22px;">TRPG</a></div>
-                    <div><a class="nav-link active" href="#CG-section" style="font-size: 22px;">CG</a></div>
-                    <div><a class="nav-link active" href="#contact-section" style="font-size: 22px;">Contact</a></div>
                 </div>
             </div>
             <!--Search-->
             <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <input class="form-control me-2" type="search" placeholder="Mortis" aria-label="Search"
+                style="background-color: transparent; width: 50%; margin-left: auto;">
+                <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
         </div>
     </nav>
 
     <div class="content-block">
-            <!--其他頁面位置-->
-            <div id="sections"></div>
+        <!--其他頁面位置-->
+        <div id="sections"></div>
 
-        </div>
+    </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
