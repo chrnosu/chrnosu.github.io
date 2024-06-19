@@ -5,38 +5,64 @@
     <p>&nbsp;</p>
     <div class="container_contact">
         <div class="box_contact">
-            <img src="img/ICON_01.jpg" alt="">
-            <div>
-                <p>蔡瑩宜 </p>
-                <p>美術設計</p>
-                <p> @99014vivi ( <a href="https://www.instagram.com/99014vivi/" target="_blank">Instagram</a> )</p>
-            </div>
-        </div>
-        <div class="box_contact">
-            <img src="img/ICON_02.jpg" alt="">
-            <div>
-                <p>蔡詩涵 </p>
-                <p>網頁設計</p>
-                <p> @aandreaa0104 ( <a href="https://www.instagram.com/aandreaa0104/" target="_blank">Instagram</a> )
+            <img src="img/ICON_04.jpg" alt="">
+            <div class="text_container">
+                <p style="font-weight: bold; font-size: 20px;">蔡瑩宜</p>
+                <p style="text-align: center;">
+                <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: 10px auto;"></div>
                 </p>
+                <p>美術設計</p>
+                <p>&nbsp;</p>
+                <img src="img/contact_divider.png" alt="" style="width: 12%; height: auto; margin: 10px;">
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">@99014vivi</p>
+                <p><a href="https://www.instagram.com/99014vivi/" target="_blank" class="btn-link">Instagram</a></p>
             </div>
         </div>
         <div class="box_contact">
             <img src="img/ICON_03.jpg" alt="">
-            <div>
-                <p>黃淑怡 美術設計 網頁設計 @chrnosu ( <a href="https://www.instagram.com/chrnosu/" target="_blank">Instagram</a> )
-                </p>
+            <div class="text_container">
+                <p style="font-weight: bold; font-size: 20px;">蔡詩涵</p>
+                <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: 10px auto;"></div>
+                <p>網頁設計</p>
+                <p>&nbsp;</p>
+                <img src="img/contact_divider.png" alt="" style="width: 12%; height: auto; margin: 10px;">
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">@aandreaa0104</p>
+                <p><a href="https://www.instagram.com/aandreaa0104/" target="_blank" class="btn-link">Instagram</a></p>
             </div>
         </div>
         <div class="box_contact">
-            <img src="img/ICON_04.jpg" alt="">
-            <div>
-                <p>吳惠敏 美術設計 網頁設計 @sallyng.aki ( <a href="https://www.instagram.com/sallyng.aki/"
-                        target="_blank">Instagram</a> )</p>
+            <img src="img/ICON_02.jpg" alt="">
+            <div class="text_container">
+                <p style="font-weight: bold; font-size: 20px;">黃淑怡</p>
+                <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: 10px auto;"></div>
+                <p>美術設計</p>
+                <p>網頁設計 </p>
+                <img src="img/contact_divider.png" alt="" style="width: 12%; height: auto; margin: 10px;">
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">@chrnosu</p>
+                <p><a href="https://www.instagram.com/chrnosu/" target="_blank" class="btn-link">Instagram</a></p>
+            </div>
+        </div>
+        <div class="box_contact">
+            <img src="img/ICON_01.jpg" alt="">
+            <div class="text_container">
+                <p style="font-weight: bold; font-size: 20px;">吳惠敏</p>
+                <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: 10px auto;"></div>
+                <p>美術設計</p>
+                <p>網頁設計</p>
+                <img src="img/contact_divider.png" alt="" style="width: 12%; height: auto; margin: 10px;">
+                <p style="font-family:Verdana, Geneva, Tahoma, sans-serif;">@sallyng.aki</p>
+                <p><a href="https://www.instagram.com/sallyng.aki/" target="_blank" class="btn-link">Instagram</a></p>
             </div>
         </div>
     </div>
 </div>
+
+<!--排版用-->
+<p>&nbsp;</p>
+
+<img style="width: 50%; display: block; margin: auto;" src="img/divider.png" alt="">
+<p>&nbsp;</p>
+
 
 
 <style>
@@ -51,43 +77,66 @@
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        gap: 20px;
+        gap: 0
     }
 
     .box_contact {
-        width: 150px;
+        width: 18%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: 14px;
-        /* Adjusted font size for better fit */
+        font-size: 15px;
         font-family: Arial, sans-serif;
         text-align: center;
-        /* Center align text inside the box */
     }
 
     .box_contact img {
-        width: 100px;
-        /* Adjusted size for better fit */
-        height: 100px;
-        /* Adjusted size for better fit */
+        width: 80%;
+        height: auto;
         margin-bottom: 10px;
     }
 
-    .box_contact div {
+    .text_container {
         display: flex;
-        align-items: center;
+        flex-direction: column;
         justify-content: center;
-        flex-grow: 1;
-        width: 100%;
-        height: 100%;
+        align-items: center;
     }
 
-    .box_contact p {
+    .text_container p {
         margin: 0;
-        padding: 10px;
+        padding: 0 5px;
         box-sizing: border-box;
         word-break: break-word;
-        /* Ensure long words break to fit within the box */
+        width: 100%;
+        text-align: center;
+        line-height: 3vh;
+    }
+
+    .btn-link {
+        display: inline-block;
+        font-weight: 400;
+        color: #ffffff;
+        text-align: center;
+        vertical-align: middle;
+        user-select: none;
+        text-decoration: none;
+        background-color: transparent;
+        border: 1px solid #ff6565;
+        background-color: #a83b3b;
+        padding: 0.375rem 0.75rem;
+        font-size: 1rem;
+        line-height: 1.5;
+        border-radius: 0.375rem;
+        transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        margin: 10px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+
+    .btn-link:hover {
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        text-decoration: none;
     }
 </style>
