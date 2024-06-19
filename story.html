@@ -10,7 +10,7 @@
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/story_01.png" class="d-block w-100" alt="Story 1">
+                <img src="img/story_01.png" class="story-image d-block w-100" alt="Story 1">
                 <img src="img/story_hove.png" class="story-hover1" alt="">
                 <div class="carousel-caption d-none d-md-block">
                     <h5 style="font-size: 50px; font-family: 'Courier New', monospace; color: white;">Story</h5>
@@ -89,8 +89,8 @@
         top: 50%;
         left: 70%;
         transform: translate(-50%, -50%);
-        width: 500px; /* Adjust size as needed */
-        animation: moveAndFade 10s infinite; /* Infinite animation for continuous effect */
+        width: 500px; 
+        animation: moveAndFade 10s infinite; 
         z-index: 2;
     }
 
@@ -99,8 +99,8 @@
         top: 20%;
         left: 22%;
         transform: translate(-50%, -50%);
-        width: 500px; /* Adjust size as needed */
-        animation: moveAndFade 10s infinite; /* Infinite animation for continuous effect */
+        width: 500px; 
+        animation: moveAndFade 10s infinite; 
         z-index: 2;
     }
 
@@ -109,9 +109,23 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 1100px; /* Adjust size as needed */
-        animation: moveAndFade 10s infinite; /* Infinite animation for continuous effect */
+        width: 1100px;
+        animation: moveAndFade 10s infinite; 
         z-index: 2;
+    }
+
+    .story-image {
+        position: relative;
+        animation: moveToPosition 2s forwards;
+    }
+
+    @keyframes moveToPosition {
+        0% {
+            transform: translate(150%, -150%);
+        }
+        100% {
+            transform: translate(0, 0);
+        }
     }
 
     @keyframes moveAndFade {
@@ -135,6 +149,14 @@
             opacity: 0;
             transform: translate(-50%, -50%);
         }
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        z-index: 3;
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        z-index: 4;
     }
 </style>
 
