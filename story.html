@@ -1,56 +1,45 @@
 <div id="story-section" class="AAAA">
     <p>&nbsp;</p>
-    <h2 style="text-align: center; transform: scale(0.5);"><img src="img/Story_top.png" alt="">></h2>
+    <h2 style="text-align: center; transform: scale(0.5);"><img src="img/Story_top.png" alt=""></h2>
     <div style="width: 70%; height: 1px; background-color: rgb(255, 255, 255); margin: -30px auto;"></div>
-    <div id="carouselStory" class="carousel slide">
+    <div id="carouselStory" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselStory" data-bs-slide-to="0" class="active"
-                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselStory" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#carouselStory" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselStory" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="img/story_01.png" class="d-block w-100" alt="...">
+                <img src="img/story_01.png" class="d-block w-100" alt="Story 1">
+                <img src="img/story_hove.png" class="story-hover1" alt="">
                 <div class="carousel-caption d-none d-md-block">
-
-                    <h5 style="font-size: 50px; font-family: 'Courier New' ,monospace; color: white;">
-                        Story</h5>
-
-                    <div class="justify-content-start"
-                        style="width: 95%; height: 2px; background-color: #a5a5a5; margin-left: 0;">
-                    </div>
-
+                    <h5 style="font-size: 50px; font-family: 'Courier New', monospace; color: white;">Story</h5>
+                    <div class="justify-content-start" style="width: 95%; height: 2px; background-color: #a5a5a5; margin-left: 0;"></div>
                     <p>&nbsp;</p>
                     <p style="color: #d9d9d9; line-height: 2.5; font-size: 17px;">
-                        在未來，人類進行身體改造，成為新人類，壽命延長但多數變成無意識喪屍。新人類壓迫原人類為奴，原人類帶領反抗力量，聯合其他被壓迫的種族，對抗新人類的暴政。</p>
+                        在未來，人類進行身體改造，成為新人類，壽命延長但多數變成無意識喪屍。新人類壓迫原人類為奴，原人類帶領反抗力量，聯合其他被壓迫的種族，對抗新人類的暴政。
+                    </p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="img/story_02.png" class="d-block w-100" alt="...">
+                <img src="img/story_02.png" class="d-block w-100" alt="Story 2">
+                <img src="img/story_hove.png" class="story-hover2" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5 style="font-size: 50px; font-family: 'Courier New' ,monospace; color: white;">
-                        About you</h5>
-
-                    <div class="justify-content-start"
-                        style="width: 95%; height: 2px; background-color: #a5a5a5; margin-left: auto;">
-                    </div>
-
+                    <h5 style="font-size: 50px; font-family: 'Courier New', monospace; color: white;">About you</h5>
+                    <div class="justify-content-start" style="width: 95%; height: 2px; background-color: #a5a5a5; margin-left: auto;"></div>
                     <p>&nbsp;</p>
-
                     <p style="color: #d9d9d9; line-height: 2.5; font-size: 17px;">
-                        你是這個世界的外來者，在這個故事中，你可以選擇任何一個陣營，做出任何選擇來拯救世界或毀滅世界。</p>
+                        你是這個世界的外來者，在這個故事中，你可以選擇任何一個陣營，做出任何選擇來拯救世界或毀滅世界。
+                    </p>
                 </div>
             </div>
-
             <div class="carousel-item">
-                <img src="img/story_03.png" class="d-block w-100" alt="...">
+                <img src="img/story_03.png" class="d-block w-100" alt="Story 3">
+                <img src="img/story_hove.png" class="story-hover3" alt="">
                 <div class="carousel-caption d-none d-md-block">
-                    <div class="caption-part ">
-                    </div>
+                    <div class="caption-part"></div>
                 </div>
             </div>
-
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselStory" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -62,7 +51,7 @@
         </button>
     </div>
 
-    <!--排版用-->
+    <!-- For layout spacing -->
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -70,9 +59,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-
 </div>
-
 
 <style>
     .carousel-caption {
@@ -96,4 +83,72 @@
         transform: translate(20%, -70%);
         text-align: right;
     }
+
+    .story-hover1 {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        width: 500px; /* Adjust size as needed */
+        animation: moveAndFade 10s infinite; /* Infinite animation for continuous effect */
+        z-index: 2;
+    }
+
+    .story-hover2 {
+        position: absolute;
+        top: 20%;
+        left: 22%;
+        transform: translate(-50%, -50%);
+        width: 500px; /* Adjust size as needed */
+        animation: moveAndFade 10s infinite; /* Infinite animation for continuous effect */
+        z-index: 2;
+    }
+
+    .story-hover3 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1100px; /* Adjust size as needed */
+        animation: moveAndFade 10s infinite; /* Infinite animation for continuous effect */
+        z-index: 2;
+    }
+
+    @keyframes moveAndFade {
+        0% {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        25% {
+            opacity: 0.75;
+            transform: translate(calc(-50% + 30px), calc(-50% + 30px));
+        }
+        50% {
+            opacity: 0.5;
+            transform: translate(calc(-50% - 30px), calc(-50% - 30px));
+        }
+        75% {
+            opacity: 0.25;
+            transform: translate(calc(-50% + 30px), calc(-50% - 30px));
+        }
+        100% {
+            opacity: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
 </style>
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('.carousel-item').mousemove(function(e) {
+            var $hoverImg = $(this).find('.story-hover');
+            var x = e.pageX - $(this).offset().left - $hoverImg.width() / 2;
+            var y = e.pageY - $(this).offset().top - $hoverImg.height() / 2;
+            $hoverImg.css({ 'left': x + 'px', 'top': y + 'px' });
+        });
+    });
+</script>

@@ -44,6 +44,17 @@
             height: 118%;
         }
 
+        .no-active-effect {
+            background-color: transparent !important;
+            /* Override any background changes */
+            color: inherit !important;
+            /* Maintain the default color */
+            width: auto !important;
+            /* Do not stretch */
+            height: auto !important;
+            /* Default height */
+        }
+
         .title-section {
             width: 80%;
             margin: 0 auto;
@@ -59,7 +70,7 @@
     <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
             <p>&emsp;</p>
-            <a class="navbar-brand m-auto p-0 border-0" href="#">
+            <a class="nav-link active m-auto p-0 border-0 no-active-effect" aria-current="page" href="#title-section">
                 <img style="height: 50px" src="img/Title.png" alt="">
             </a>
             <!--Navbar-->
@@ -85,7 +96,7 @@
             <!--Search-->
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Mortis" aria-label="Search"
-                style="background-color: transparent; width: 50%; margin-left: auto;">
+                    style="background-color: transparent; width: 50%; margin-left: auto;">
                 <button class="btn btn-outline-light" type="submit">Search</button>
             </form>
         </div>
