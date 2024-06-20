@@ -15,11 +15,11 @@
     <style>
         body {
             background-color: black;
-            background-image: url("img/Main_BG.png");
-            background-repeat: repeat-y;
-            background-size: 78.5% auto;
-            background-position: center;
-            background-attachment: fixed;
+            background-image: url("img/Main_BG.png"), url("img/BG_A.gif");
+            background-repeat: repeat-y, repeat;
+            background-size: 78.5% auto, cover;
+            background-position: center, center;
+            background-attachment: fixed, fixed;
         }
 
         .AAAA {
@@ -67,6 +67,7 @@
         #search-input {
             color: white;
         }
+
     </style>
 </head>
 
@@ -91,6 +92,7 @@
                     <div><a class="nav-link active" href="#character-section"><img src="img/Nav_character.png"
                                 alt=""></a></div>
                     <div><a class="nav-link active" href="#TRPG-section"><img src="img/Nav_trpg.png" alt=""></a></div>
+                    <div><a class="nav-link active" href="#weapon-section"><img src="img/Nav_weapon.png" alt=""></a></div>
                     <div><a class="nav-link active" href="#CG-section"><img src="img/Nav_gallery.png" alt=""></a></div>
                     <div><a class="nav-link active" href="#contact-section"><img src="img/Nav_contact.png" alt=""></a>
                     </div>
@@ -125,6 +127,7 @@
                 $(this).append($('<div/>').load("story.html"));
                 $(this).append($('<div/>').load("character.html"));
                 $(this).append($('<div/>').load("TRPG.html"));
+                $(this).append($('<div/>').load("weapon.html"));
                 $(this).append($('<div/>').load("CG.html"));
                 $(this).append($('<div/>').load("contact.html"));
 
